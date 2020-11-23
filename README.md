@@ -69,13 +69,9 @@ Given these logs, your task is to implement the following features in a **single
 
 For each log, we want to extract the above values from a `log.txt` file as a time series, and plot the time series in the dashboard. So, for each entry in our list, we would have 4 time series plots (assuming both client and server logs exist). Note: you'll want to do this server-side by creating a new endpoint in `app/blueprints/log_blueprint.py` in the server.
 
-4. **Handling missing information** You'll notice that for some entries in the list, the client or server logs are missing. We want to be able to handle this in the UI, to let the user know that a certain `log.txt` file is missing.
+4. **Log filtering** We want to be able to search for logs by username. Implement a search bar that lets us find all the logs associated with a particular user (Note: not just the logs that have been loaded into the browser, but all the logs that are stored in the server).
 
-5. **Logging errors** If you open up any log files, you'll see that each line comes with a status code of INFO, WARNING, or ERROR. For each log file, we are interested in how many ERRORs and WARNINGs there are, both in absolute terms and as a percentage of total lines in the log file. Note: you'll want to do this server-side by creating a new endpoint in `app/blueprints/log_blueprint.py` in the server, or appending more code to your endpoint in part #3.
-
-6. **Log filtering** We want to be able to search for logs by username. Implement a search bar that lets us find all the logs associated with a particular user (Note: not just the logs that have been loaded into the browser, but all the logs that are stored in the server).
-
-7. **Bonus features** If you've finished Features 1-6, feel free to get creative and think about features that would be useful to a user, like log bookmarking, summary statistics of errors (i.e. across all the logs, which errors are most common?), summary statistics of time series (what is the median of the time series? correlations between number of errors and median network latency?), etc. or anything else that comes to mind. Impress us by thinking outside the box!
+5. **Bonus features** If you've finished Features 1-4, feel free to get creative and think about features that would be useful to a user, like log bookmarking, summary statistics of errors (i.e. across all the logs, which errors are most common?), summary statistics of time series (what is the median of the time series? correlations between number of errors and median network latency?), etc. or anything else that comes to mind. Impress us by thinking outside the box!
 
 We strongly encourage you to think of a clean UI that can convey all of the above information in a **single paged dashboard (no multiple tabs or multiple pages!)**. For best results, we also strongly recommend using a design/prototyping tool to figure out how you want your dashboard to look before you actually start coding (e.g. Figma, Adobe Illustrator), if you're familiar with such tools.
 
@@ -92,6 +88,10 @@ More specifically, you will be assessed on the following four categories:
 3. **Code Design** How readable and organized is the code?
 
 4. **Performance** What considerations were given to loading times, scaling to large numbers of concurrent requests/connections, etc.?
+
+## This Boilerplate is Not Perfect...
+
+As you read through the code you may notice that there are some design decisions that are not ideal, or features that you would expect from a more mature code base that are missing. Please include any thoughts on how you would improve this repo in a separate Notes.MD file (for example, tests are missing in the server).
 
 ## How To Submit
 
